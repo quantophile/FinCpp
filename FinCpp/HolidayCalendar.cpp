@@ -83,20 +83,26 @@ namespace FinCpp::Basics {
 		}
 	}
 
-	bool HolidayCalendar::isHoliday(date d)
+	bool HolidayCalendar::isHoliday(date d) const
 	{
-		auto result = std::find_if(m_holidayDates.begin(), m_holidayDates.end(), d);
+		auto result{ m_holidayDates.begin() };
+		for (auto i{ 0 }; result != m_holidayDates.end(); ++result, ++i)
+		{
+			if (result->day() == m_holidayDates[i].day() && result->month() == m_holidayDates[i].month() && result->year() == m_holidayDates[i].year())
+				break;
+		}
+
 		if (d.day_of_week() == m_firstWeekendDay || d.day_of_week() == m_secondWeekendDay)
 		{
 			return true;
 		}
 		else
 		{
-			return (result != std::end(m_holidayDates));
+			return (result != m_holidayDates.end());
 		}
 	}
 
-	bool HolidayCalendar::isBusDay(date d)
+	bool HolidayCalendar::isBusDay(date d) const
 	{
 		return !(isHoliday(d));
 	}

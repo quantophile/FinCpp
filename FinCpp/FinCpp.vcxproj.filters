@@ -39,6 +39,12 @@
     <ClInclude Include="StubConventions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DayCounts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RollConventions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

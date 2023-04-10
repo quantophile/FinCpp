@@ -10,6 +10,11 @@ namespace FinCpp::Basics {
 		{
 			return ((year % 4 == 0) && (!(year % 100 == 0))) || (year % 400 == 0);
 		}
+
+		static inline int lengthOfYear(int year)
+		{
+			return isLeapYear(year) ? 366 : 365;
+		}
 		
 		static inline boost::gregorian::date ensureLeapDay(boost::gregorian::date input)
 		{
@@ -28,16 +33,15 @@ namespace FinCpp::Basics {
 
 		static inline boost::gregorian::date nextLeapDay(boost::gregorian::date input)
 		{
-			int yy = input.year();
 
 			/**  
 			* Handle if already a leap day, move forward either 4 or 8 years
 			*/
 			if (input.month() == 2 && input.day() == 29)
 			{
-				if (isLeapYear(yy))
+				if (isLeapYear(input.year()))
 				{
-					return ensureLeapDay(boost::gregorian::date(yy + 4, 2, 29));
+					return ensureLeapDay(boost::gregorian::date(input.year() + 4, 2, 29));
 				}
 			}
 

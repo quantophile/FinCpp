@@ -15,8 +15,8 @@ namespace FinCpp::Basics {
 		HolidayCalendar(HolidayCalendarId id);
 		HolidayCalendar(HolidayCalendarId id, boost::date_time::weekdays firstWeekendDay, boost::date_time::weekdays secondWeekendDay);
 		HolidayCalendar(const HolidayCalendar& h);
-		bool isHoliday(boost::gregorian::date d);
-		bool isBusDay(boost::gregorian::date d);
+		bool isHoliday(boost::gregorian::date d) const; 
+		bool isBusDay(boost::gregorian::date d) const;
 	private:
 		std::vector<boost::gregorian::date> m_holidayDates;
 		boost::date_time::weekdays m_firstWeekendDay;
