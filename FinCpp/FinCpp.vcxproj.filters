@@ -45,6 +45,12 @@
     <ClInclude Include="RollConventions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Frequency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriodType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

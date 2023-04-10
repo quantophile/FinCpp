@@ -187,8 +187,10 @@
     <ClInclude Include="DayCounts.h" />
     <ClInclude Include="DayOfWeek.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Frequency.h" />
     <ClInclude Include="HolidayCalendar.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PeriodType.h" />
     <ClInclude Include="RollConventions.h" />
     <ClInclude Include="Schedule.h" />
     <ClInclude Include="SchedulePeriod.h" />
